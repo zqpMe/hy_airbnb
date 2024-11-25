@@ -1,0 +1,43 @@
+{
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src" // 配合path-intellisense插件，如果项目下有jsconfig.json文件，可以配置import@路径提示
+  },
+  "editor.mouseWheelZoom": true, // 鼠标滚轮控制字体大小
+  "files.autoSave": "afterDelay", // 自动保存代码
+  "editor.tabSize": 2, // 指定一个tab等于多少个空格，例如此处指定4就像等于4个空格，2就等于两个空格
+  "editor.detectIndentation": false, // 必须指定！！否则指定的tab大小将不起效果
+  "editor.wordWrap": "on", //自动换行
+  "editor.minimap.enabled": false, //删除编辑器右侧的文件预览
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true, // 启用时，提交将自动从当前Git存储库的默认远程获取
+  "workbench.editor.enablePreview": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur" //用 vetur 来接管 vue 的格式
+  },
+  "vetur.format.defaultFormatter.html": "js-beautify-html", //解决template里的html代码，会因为标签内的属性稍有超出就出现换行
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto", //仅在超出行长度时才对属性进行换行。
+      // "wrap_attributes": "aligned-multiple", //也可以设置为“auto”，效果会不一样
+      // "wrap_attributes":"force-aligned",//每个标签属性就换行
+      "wrap_line_length": 300,
+      "semi": false,
+      "singleQuote": true
+    },
+    "prettier": {
+      "printWidth": 500, // 代码宽度  js超过 XXX换行
+      //设置分号
+      "semi": false,
+      //双引号变成单引号
+      "singleQuote": true,
+      //禁止随时添加逗号,这个很重要。找了好久
+      "trailingComma": "none"
+    }
+  }
+}
