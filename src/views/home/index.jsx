@@ -32,6 +32,7 @@ const Home = memo(() => {
   return (
     <HomeWrapper>
       <HomeBanner/>
+      <h1>home</h1>
       <div className='content'>
         {/* 折扣数据 */}
         {/* <div className='discount'>
